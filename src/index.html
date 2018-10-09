@@ -6,7 +6,35 @@
     </head>
     <body>
         <main>
+            <header>
+                <h3>Green Stormwater Infrastructure in Santa Clara County</h3>
+                <div>
+                    By <a href="https://eoainc.org">SCVURPPP</a>
+                </div>
+            </header>
             <div id="map"></div>
+            <div id="popup">
+                <span id="name"></span>
+                <div>
+                    <span id="count"></span>
+                    Area of Green Stormwater Infrastructure
+                </div>
+            </div>
+            <div id="legend">
+                <h4>Area of Green Stormwater Infrastructure (acres)</h4>
+            </div>
         </main>
+
+        <template id="attribution">
+            <a href="http://scvurppp-w2k.com/" target="_blank">SCVURPPP</a>,
+            <a href="http://www.eoainc.com/" target="_blank">EOA</a>
+        </template>
+
+        <template id="legend-entry">
+            <div class="entry">
+                <span class="color"></span>
+                <span class="value"></span>
+            </div>
+        </template>
     </body>
 </html>

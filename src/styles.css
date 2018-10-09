@@ -5,10 +5,50 @@ body {
 
 main {
     position: fixed;
-    top: 100px;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+header, #legend, #popup {
+    position: fixed;
+    background-color: #d2d2d2;
+    border: 1px solid black;
+    border-radius: 3px;
+    z-index: 100;
+    padding: 15px;
+}
+
+header {
+    top: 5px;
+    left: 5px;
+}
+
+#legend {
+    bottom: 30px;
+    right: 5px;
+}
+
+#popup {
+    display: none;
+    top: 5px;
+    right: 5px;
+}
+
+h3, h4 {
+    margin: 0 0 5px;
+}
+
+a {
+    color: black;
+}
+
+.color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: solid 1px black;
 }
 
 #map {

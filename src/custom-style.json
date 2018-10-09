@@ -28,26 +28,53 @@
       },
       {
         "id": "catchments",
-        "type": "fill",
+        "type": "fill-extrusion",
         "source": "catchments",
         "paint": {
-          "fill-opacity": 0.25,
-          "fill-color": "#0000BB"
+                "fill-extrusion-height": [
+                    "+",
+                    [
+                        "*",
+                        ["get", "TotalArea"],
+                        30
+                    ],
+                    [
+                        "case",
+                        ["boolean", ["feature-state", "hover"], false],
+                        10,
+                        0
+                    ]
+                ],
+                "fill-extrusion-base": [
+                    "case",
+                    ["boolean", ["feature-state", "hover"], false],
+                    10,
+                    0
+                ],
+                "fill-extrusion-opacity": 0.7,
+                "fill-extrusion-color": {
+                    "property": "TotalArea",
+                    "stops": [
+                      [0, "#edf8fb"],
+                      [3, "#b2e2e2"],
+                      [10, "#66c2a4"],
+                      [30, "#2ca25f"],
+                      [60, "#006d2c"]
+                    ]
+                }
+            }
         },
-        "filter": [">", "TotalArea", 0]
-      },
-      {
+        {
         "id": "lid",
         "type": "circle",
         "source": "lid",
         "paint": {
-          "circle-radius": 7,
-          "circle-color": "#33CC33",
-          "circle-opacity": 0.6,
+          "circle-radius": 5,
+          "circle-color": "#3333CC",
+          "circle-opacity": 0.5,
           "circle-stroke-width": 2,
           "circle-stroke-color": "#555555"
         }
       }
-
-  ]
+    ]
 }
