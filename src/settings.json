@@ -1,5 +1,8 @@
 {
     "container": "map",
     "accessToken": "pk.eyJ1IjoibnppZ2xlciIsImEiOiJjajR6MDVxeWMwNDBkMndud3oyajQ5MHF2In0.BBVHLn9wpuf-UQn-fttOhA",
-    "style": "mapbox://styles/mapbox/streets-v9"
+    "style": "mapbox://styles/nzigler/cjmr5ant1dsrw2rscqj3hug8t",
+    "center": [
+      -121.95,37.35
+    ],    "zoom": 10
 }
